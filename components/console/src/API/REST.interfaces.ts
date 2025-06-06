@@ -358,10 +358,14 @@ export interface HeartbeatRequest {
 
 export interface LibraryBlockTypeResponse {
   type: string;
-  description?: string;
   allownorth: boolean;
   allowsouth: boolean;
   allocatetosite: boolean;
+}
+
+// Object map format returned by the backend API
+export interface LibraryBlockTypeMap {
+  [blockTypeName: string]: LibraryBlockTypeResponse;
 }
 
 export interface LibraryBlockHistoryResponse {
